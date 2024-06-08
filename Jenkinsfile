@@ -16,13 +16,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t my-spring-app .'
+                sh 'sudo docker build -t my-spring-app .'
             }
         }
 
         stage('Run Docker Container') {
             steps {
-                sh 'docker run -d -p 9000:9000 my-spring-app'
+                sh 'sudo docker run -d -p 9000:9000 my-spring-app'
             }
         }
     }
