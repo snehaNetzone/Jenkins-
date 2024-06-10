@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-                sh 'sudo -S docker run -d -p 9000:9000 my-spring-app'
+                sh 'sudo -S docker run -d -p 9000:8080 my-spring-app'
             }
         }
     }
