@@ -16,7 +16,6 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'echo "jenkins24" | sudo -S usermod -aG docker $jenkins'
                 sh 'docker build -t my-spring-app .'
             }
         }
