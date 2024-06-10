@@ -1,4 +1,4 @@
-FROM openjdk-17-alpine
-EXPOSE 9000		
-ADD target/spring-boot-docker.jar spring-boot-docker.jar
-ENTRYPOINT ["java", "-jar", "/spring-boot-docker.jar"]
+FROM openjdk:17-jdk-alpine
+EXPOSE 9000
+COPY target/spring-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
